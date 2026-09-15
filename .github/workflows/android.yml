@@ -26,8 +26,11 @@ jobs:
           java-version: "17"
           cache: gradle
 
-      - name: Set up Android SDK
+      - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          api-level: 35
+          ndk-version: 26.1.10909125
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
