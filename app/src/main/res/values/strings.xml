@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PrivacyGuard AI</string>
+    <string name="notification_channel_name">Active protection</string>
+    <string name="notification_channel_description">Shows when PrivacyGuard AI is using the front camera to protect the screen.</string>
+</resources>
