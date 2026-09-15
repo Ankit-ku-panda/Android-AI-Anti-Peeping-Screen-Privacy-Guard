@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.ankitkupanda.privacyguard'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.ankitkupanda.privacyguard'
+        minSdk 26
+        targetSdk 35
+        versionCode 3
+        versionName '1.2.0'
+
+        testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    // Bundled model: face detection works immediately and completely offline.
+    implementation 'com.google.mlkit:face-detection:16.1.7'
+    testImplementation 'junit:junit:4.13.2'
+}
